@@ -1,0 +1,24 @@
+Installing Image Magic on XAMPP
+1. See your xampp info using the code : <?php phpinfo(); ?>
+Architecture:	x86 (XAMPP Default)
+Thread Safety: 	Enabled
+Compiler:	MSVC11 (Visual C++ 2012)
+
+2. Download and install ImageMagick for Windows from:
+https://www.imagemagick.org/script/download.php#windows
+
+3. Download Imagick for PHP from:
+https://pecl.php.net/package/imagick
+
+4. copy 'php_imagick.dll' to 'xampp/php/ext'
+
+5. Add the following line where the other extensions are loaded in 'php.ini':
+extension=php_imagick.dll
+
+6. Download required Imagick binaries from:
+https://windows.php.net/downloads/pecl/deps/
+
+7. copy all the .dll files (except ImageMagickObject.dll) to '\xampp\apache\bin'
+
+8. restart apache and search by 'imagick' using <?php phpinfo(); ?>
+
